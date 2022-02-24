@@ -37,6 +37,7 @@ public class HomeActivity extends AppCompatActivity {
     public static final String EXTRA_FROM_ADMIN = "EXTRA_FROM_ADMIN";
 
     public static final String KEY_IS_FIRST_TIME = "EXTRA_IS_FIRST_TIME";
+    public static final String EXTRA_DNI = "EXTRA_DNI";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +82,9 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
         btnDeleteUser.setOnClickListener(view -> {
-
+            Intent intent = new Intent(getApplicationContext(), SearchDeleteActivity.class);
+            intent.putExtra(EXTRA_DNI, getInputDNI());
+            startActivity(intent);
         });
         btnUpdatePassword.setOnClickListener(view -> {
             btnUpdatePassword.setVisibility(View.GONE);

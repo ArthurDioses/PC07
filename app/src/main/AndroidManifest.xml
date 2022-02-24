@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PC07">
         <activity
+            android:name=".SearchDeleteActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
